@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <ImageView
+        android:id="@+id/firetera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/fireteravertical"
+        ></ImageView>
+
+    <TextView
+        android:id="@+id/all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="2dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/interregular"
+        android:background="#FFF3F3"
+        android:layout_below="@+id/firetera"
+        android:layout_margin="10dp"
+        ></TextView>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/all"
+        android:id="@+id/recylerviewApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        ></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

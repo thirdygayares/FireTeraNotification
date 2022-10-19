@@ -1,18 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/firehome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@drawable/firehome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        ></ImageView>
 
-</android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_circle_24"
+        android:layout_below="@+id/firehome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        ></ImageView>
+
+    <TextView
+        android:id="@+id/shortcut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shorcut in your Important App"
+        android:layout_below="@id/circle"
+        android:fontFamily="@font/interbold"
+        android:textSize="28dp"
+        android:textColor="#595A66"
+        android:textAlignment="center"
+        ></TextView>
+
+
+
+    <TextView
+        android:id="@+id/firetera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FireApp"
+        android:layout_below="@id/shortcut"
+        android:fontFamily="@font/interregular"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#595A66"
+        android:textAlignment="center"
+        ></TextView>
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firetera"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#B129ED"
+        android:fontFamily="@font/interbold"
+        android:padding="20dp"
+        android:text="Start"
+        android:textColor="@color/white"
+        android:textSize="30dp"></Button>
+
+
+
+</RelativeLayout>
