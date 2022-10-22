@@ -7,4 +7,27 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+<!--    start of customization of color-->
+    <color name="calculator">#1F1F1F</color>
+    <color name="chrome">#FBC117</color>
+    <color name="facebook">#3F67A9</color>
+    <color name="grab">#289245</color>
+    <color name="instagram">#FE4628</color>
+    <color name="lazada">#0739E0</color>
+    <color name="linkedin">#0274B3</color>
+    <color name="messenger">#5C5FFF</color>
+    <color name="mobilelegends">#E3D2A5</color>
+    <color name="netflix">#E13943</color>
+    <color name="shopee">#FE5722</color>
+    <color name="spotify">#1ED760</color>
+    <color name="sms">#2E54B5</color>
+
+    <color name="telegram">#2CA5E0</color>
+    <color name="tiktok">#400014</color>
+    <color name="twitter">#1DA1F2</color>
+    <color name="viber">#A59AF7</color>
+    <color name="youtube">#D72C1B</color>
+
+
+
 </resources>

@@ -1,9 +1,254 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".AppHolder">
 
-</android.support.constraint.ConstraintLayout>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <!--        header-->
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-30dp"
+            android:src="@drawable/facebookbg"></ImageView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#B129ED"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/back"></ImageView>
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/notfavorite"></ImageView>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-200dp"
+        android:background="@drawable/bottom"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/divider"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/divider"></ImageView>
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/interbold"
+                android:text="Calculator"
+                android:textColor="#595A66"
+                android:textSize="25dp"></TextView>
+
+            <ImageView
+                android:id="@+id/locationicon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/appName"
+                android:layout_alignLeft="@+id/appName"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/location"></ImageView>
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appName"
+                android:layout_marginTop="9dp"
+                android:layout_toRightOf="@+id/locationicon"
+                android:fontFamily="@font/interbold"
+                android:paddingLeft="10dp"
+                android:text="French"
+                android:textColor="#9176FF"
+                android:textSize="14dp"></TextView>
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/locationicon"
+                android:layout_alignLeft="@+id/locationicon"
+                android:layout_marginTop="19dp"
+                android:fontFamily="@font/interregular"
+                android:paddingLeft="10dp"
+                android:text="The first mechanical calculator was invented by Blaise Pascal in the early 1600s. Pascal's calculator was able to add, subtract, multiply, and divide."
+                android:textColor="#88898F"
+                android:textSize="16dp"></TextView>
+
+
+            <!--        created and creator-->
+
+            <LinearLayout
+                android:id="@+id/more_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/about"
+                android:layout_alignLeft="@id/about"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/icon_created"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/created"
+
+                        ></ImageView>
+
+                    <TextView
+                        android:id="@+id/createdTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/icon_created"
+                        android:fontFamily="@font/interbold"
+                        android:text="Created"
+                        android:textColor="#595A66"
+                        android:textSize="18dp"></TextView>
+
+                    <TextView
+                        android:id="@+id/create"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/createdTitle"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="-2dp"
+                        android:layout_toRightOf="@+id/icon_created"
+                        android:fontFamily="@font/interregular"
+                        android:text="2006"
+                        android:textColor="#B1B1B7"
+                        android:textSize="16dp"></TextView>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/icon_creator"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/creator"
+
+                        ></ImageView>
+
+                    <TextView
+                        android:id="@+id/creatorTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/icon_creator"
+                        android:fontFamily="@font/interbold"
+                        android:text="Creator"
+                        android:textColor="#595A66"
+                        android:textSize="18dp"></TextView>
+
+                    <TextView
+                        android:id="@+id/creator"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/creatorTitle"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="-2dp"
+                        android:layout_toRightOf="@+id/icon_creator"
+                        android:fontFamily="@font/interregular"
+                        android:text="Blaise Pascal"
+                        android:textColor="#B1B1B7"
+                        android:textSize="16dp"></TextView>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+<!--        dito mo ilagay-->
+
+        <Button
+            android:id="@+id/open"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="29dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/button_radius"
+            android:text="OPEN"
+            android:textColor="@color/white"
+            ></Button>
+
+    </LinearLayout>
+</ScrollView>
+
+</LinearLayout>
