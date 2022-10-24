@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class Home extends AppCompatActivity implements AppInterface {
     ArrayList<AppModel> appModels = new ArrayList<>();
     RecyclerView recyclerView;
+    static int container = 0;
     String[] title = {"Calculator","Chrome", "Facebook","Grab", "Instagram","Lazada", "Linkedin","Messenger","Mobile Legends", "Netflix", "Shopee", "SMS", "Spotify", "Telegram", "Tiktok", "Twitter", "Viber", "Youtube" };
     String[] location = {"French", "USA", "Massachusetts USA", "Singapore", "San Francisco USA", "Singapore", "United States", "USA", "China","California USA","Singapore","Germany","Swedish","Germany","China","California USA","Japan","America" };
     String[] description = {"The first mechanical calculator was invented by Blaise Pascal in the early 1600s. Pascal's calculator was able to add, subtract, multiply, and divide",
@@ -110,15 +111,22 @@ public class Home extends AppCompatActivity implements AppInterface {
         //pass the data of android packagename
         intent.putExtra("app", app[position]);
 
+        //int
+        intent.putExtra("pos", position);
+        container = position;
+
+
         //pass the data of web incase the current app is not isntalled
         intent.putExtra("web", web[position]);
-
 
         //pass the icon for notification
         intent.putExtra("icon", icon[position]);
 
         //pass the color icon for notification
         intent.putExtra("color", colorIcon[position]);
+
+//        Toast.makeText(Home.this, app[position], Toast.LENGTH_SHORT).show();
+
 
         startActivity(intent);
     }

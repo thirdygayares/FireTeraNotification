@@ -21,7 +21,7 @@ public class AppHolder extends AppCompatActivity {
     ImageView back,background;
     TextView created, creator, descrition,location,title;
     Button open;
-
+    String appss = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +32,14 @@ public class AppHolder extends AppCompatActivity {
 //        back
         back();
 
+
+
         //open a notification
         openNotif();
 
         Intent intent = getIntent();
         int bg = intent.getIntExtra("background", -1);
-
+        appss = intent.getStringExtra("app");
         //set Image
         background.setImageResource(bg);
         //set Text of app title
@@ -78,10 +80,12 @@ public class AppHolder extends AppCompatActivity {
         int color = getData.getIntExtra("color", -1);
         String name = getData.getStringExtra("appName");
         String description = getData.getStringExtra("description");
-        String app = getData.getStringExtra("app");
+        int pos =  getData.getIntExtra("pos", -1);
+        int lagayan = pos;
+
+//        Toast.makeText(AppHolder.this, String.valueOf(lagayan), Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(  this, NotificationVIew.class);
-        intent.putExtra("apps", app);
 
 
         intent.setFlags (Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -93,6 +97,9 @@ public class AppHolder extends AppCompatActivity {
                 .setPriority (NotificationCompat.PRIORITY_DEFAULT)
                 // Set the intent that will fire when the user taps the notification
                 .setContentIntent(pendingIntent).setAutoCancel(true);
+
+        intent.putExtra("notifApps", lagayan);
+
 
         // Add as notification
         NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
